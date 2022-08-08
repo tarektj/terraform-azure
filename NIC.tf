@@ -5,7 +5,7 @@ resource "azurerm_network_interface" "myNIC" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.mySubnet1.id
+    subnet_id                     = azurerm_subnet.mySubnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id = azurerm_public_ip.myPublicIP.id
   }

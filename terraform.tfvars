@@ -4,7 +4,7 @@ tags = {
 env = "test"
 }
 vnetname = "myterraformvnet"
-subnetname = "mysubnet1"
+subnetname = "mysubnet"
 ipaddressname = "myIpAddress"
 nsgname = "myNSG"
 nicname = "myNIC"
