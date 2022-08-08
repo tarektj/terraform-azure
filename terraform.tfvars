@@ -5,3 +5,4 @@ env = "test"
 }
 vnetname = "myterraformvnet"
 subnetname = "mysubnet"
+ipaddressname = "myIpAddress"
