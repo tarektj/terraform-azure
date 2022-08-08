@@ -5,7 +5,7 @@ resource "azurerm_network_interface" "myNIC" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_subnet.myTerraformNetwork.subnet.id
+    subnet_id                     = azurerm_virtual_network.myTerraformNetwork.subnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id = azurerm_public_ip.myPublicIP.id
   }
