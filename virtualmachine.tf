@@ -1,6 +1,6 @@
 resource "azurerm_linux_virtual_machine" "myVirtualMachine" {
   name                = var.virtualMachineName
-  resource_group_name = azurerm_resource_group.myTerrformGroup.name
+  resource_group_name = azurerm_resource_group.myTerraformGroup.name
   location            = var.location
   size                = "Standard_F2"
   admin_username      = "adminuser"
