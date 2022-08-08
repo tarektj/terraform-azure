@@ -5,13 +5,13 @@ resource "azurerm_network_interface" "myNIC" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = azurerm_virtual_network.myTerraformNetwork.subnet_id
+    subnet_id                     = azurerm_subnet.mySubnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id = azurerm_public_ip.myPublicIP.id
   }
   tags = var.tags
 }
-resource "azurerm_network_interface_security_group_association" "example" {
+resource "azurerm_network_interface_security_group_association" "NISGA" {
   network_interface_id      = azurerm_network_interface.myNIC.id
   network_security_group_id = azurerm_network_security_group.myTerraformNSG.id
 }
